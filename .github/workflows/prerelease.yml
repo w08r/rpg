@@ -1,7 +1,7 @@
 on:
   push:
     tags:
-    - 'v*'
+    - 'pre*'
 
 name: prerelease
 env:
@@ -24,7 +24,7 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
           draft: true
-          prerelease: false
+          prerelease: true
   upload_release:
     name: upload release
     needs: create_release
