@@ -3,13 +3,13 @@ on:
     tags:
     - 'v*'
 
-name: Upload Release Asset
+name: release
 env:
   CARGO_TERM_COLOR: always
 
 jobs:
   create_release:
-    name: Create release
+    name: create release
     runs-on: ubuntu-latest
     # Note this. We are going to use that in further jobs.
     outputs:
@@ -25,8 +25,8 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: true
           prerelease: true
-  upload:
-    name: Upload Release Asset
+  upload_release:
+    name: upload release
     needs: create_release
     runs-on: ${{ matrix.config.os }}
     strategy:
