@@ -3,7 +3,7 @@ on:
     tags:
     - 'v*'
 
-name: prerelease
+name: release
 env:
   CARGO_TERM_COLOR: always
 
