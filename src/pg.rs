@@ -1,5 +1,4 @@
 use crate::reader::Reader;
-
 pub struct PostgresOpts<'a> {
     pub dbname: &'a str
 }

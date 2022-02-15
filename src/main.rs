@@ -19,7 +19,7 @@ fn main() {
              -i, --input=[FILE] 'Use [FILE] as input',
              -t, --type=[FILETYPE] 'Use [FILETYPE] as input file type (default: infer)'",
         )
-        .subcommand(
+       .subcommand(
             SubCommand::with_name("pg")
                 .about("uploads to postgresql")
                 .args_from_usage(
